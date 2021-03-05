@@ -4,8 +4,9 @@ resource "google_container_cluster" "default" {
   description = "Demo GKE Cluster"
   location    = var.location
 
-  remove_default_node_pool = true
-  initial_node_count       = var.initial_node_count
+  enable_legacy_abac        = true 
+  remove_default_node_pool  = true
+  initial_node_count        = var.initial_node_count
 
   master_auth {
     username = ""
@@ -22,7 +23,7 @@ resource "google_container_node_pool" "default" {
   project    = var.project
   location   = var.location
   cluster    = google_container_cluster.default.name
-  node_count = 1
+  node_count = 3
 
   node_config {
     preemptible  = true

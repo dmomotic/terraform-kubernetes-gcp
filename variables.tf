@@ -7,11 +7,11 @@ variable "project" {
 }
 
 variable "location" {
-  default = "us-central1"
+  default = "us-east1-b"
 }
 
 variable "initial_node_count" {
-  default = 1
+  default = 3
 }
 
 variable "machine_type" {
