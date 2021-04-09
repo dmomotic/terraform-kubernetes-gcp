@@ -3,7 +3,7 @@ variable "name" {
 }
 
 variable "project" {
-  default = "sa-grupo8"
+  default = "nuevo-proyecto-sa8"
 }
 
 variable "location" {

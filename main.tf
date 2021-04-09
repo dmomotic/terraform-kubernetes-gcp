@@ -1,3 +1,7 @@
+provider "google" {
+  credentials = file("./nuevo-proyecto-sa8-457750aa468a.json")
+}
+
 resource "google_container_cluster" "default" {
   name        = var.name
   project     = var.project
